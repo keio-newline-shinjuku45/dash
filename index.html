@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルールブック</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .nav-item.active {
+            background-color: #f3f4f6;
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- モバイル用トグルボタン -->
+    <div class="p-4 sm:hidden flex items-center bg-white border-b border-gray-200">
+        <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+        <span class="ms-3 text-lg font-semibold text-gray-900">ルールブック[非公式]</span>
+    </div>
+
+    <!-- サイドバー -->
+    <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-white border-r border-gray-200">
+            <div class="flex items-center px-2 mb-6">
+                <span class="text-xl font-bold text-gray-900">ルールブック[非公式]</span>
+            </div>
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="#" data-target="links" class="nav-item active flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                        </svg>
+                        <span class="ms-3">リンク集</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-target="slack-rules" class="nav-item flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Slack利用ルール</span>
+                        <span class="bg-gray-100 text-gray-800 border border-gray-300 text-xs font-medium px-2 py-0.5 rounded">独自</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-target="slack-terms" class="nav-item flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Slack利用規約</span>
+                        <span class="bg-blue-100 text-blue-800 border border-blue-200 text-xs font-medium px-2 py-0.5 rounded">公式規約</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-target="ground-rules" class="nav-item flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5713 5h7v9h-7m-6.00001-4-3 4.5m3-4.5v5m0-5h3.00001m0 0h5m-5 0v5m-3.00001 0h3.00001m-3.00001 0v5m3.00001-5v5m6-6 2.5 6m-3-6-2.5 6m-3-14.5c0 .82843-.67158 1.5-1.50001 1.5-.82843 0-1.5-.67157-1.5-1.5s.67157-1.5 1.5-1.5 1.50001.67157 1.50001 1.5Z"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">グランドルール</span>
+                        <span class="inline-flex items-center justify-center w-5 h-5 ms-2 text-xs font-semibold text-red-800 bg-red-100 rounded-full">4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-target="developer" class="nav-item flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">開発者について</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-target="forms" class="nav-item flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">フォーム提出について</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="https://sites.google.com/nnn.ac.jp/event-calendar/" target="_blank" rel="noopener noreferrer" class=" flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 group">                        <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2"/>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">イベントカレンダー</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- メインコンテンツエリア -->
+    <main class="p-6 sm:ml-64 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- リンク集 -->
+            <section id="links" class="content-section active bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900"> リンク集</h1>
+                <p class="text-gray-600 mb-6"><br>当サイトは生徒が作成したもの(一部を除き、学園公式のものを引用)で、学園とは一切関係ありません。</p>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScUp3_TjXsBRlCs4zrjpcIdjOFq0ML17_sbIgQzXH1f2HLxRA/viewform" class="p-4 border rounded-lg hover:shadow-md transition bg-gray-50 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold text-blue-600">外出申請</p>
+                            <p class="text-xs text-gray-500">昼休憩に買い物をしに行く場合は、必ずこちらのフォームから申請してください。</p>
+                        </div>
+                        <span class="text-gray-400">→</span>
+                    </a>
+                    <a href="#" class="p-4 border rounded-lg hover:shadow-md transition bg-gray-50 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold text-blue-600">科目学習フォーム</p>
+                            <p class="text-xs text-gray-500">週3・週5生は、月曜日の、週1生は火曜日の終わりの会に必ず提出してください。</p>
+                        </div>
+                        <span class="text-gray-400">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Slack利用ルール -->
+            <section id="slack-rules" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900">💬 Slack利用ルール（独自）</h1>
+                <div class="space-y-4 text-gray-700">
+                    <div class="p-4 bg-amber-50 border-l-4 border-amber-400 rounded">
+                        <p class="font-bold">1.投稿する内容は無制限ではありません</p>
+                        <p class="text-sm">
+                           Slackへの投稿は基本的に自由ですが、内容によっては認められないものもあります。
+                           特に、違法行為、他社や他人などの権利を侵害する行為、公序良俗に反する投稿などについては、スタッフの判断によりコメントやチャンネル、カスタムスタンプを削除
+                           される場合があります。</p>
+                    </div>
+                    <div class="p-4 bg-amber-50 border-l-4 border-amber-400 rounded">
+                        <p class="font-bold">2.ルール違反の措置</p>
+                        <p class="text-sm">口頭での注意、Slackの利用停止など、悪質な場合は停学や退学などになる可能性があります。</p>
+                    </div>
+                </div>
+            </section>
+
+<!-- Slack利用規約 -->
+<section id="slack-terms" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+    <h1 class="text-2xl font-bold mb-4 text-gray-900">📜 Slack利用規約（公式規約）</h1>
+    <p class="text-gray-600 mb-4">Slackを使用するにあたり、以下の公式規約およびセキュリティガイドラインを遵守してください。</p>
+    
+    <!-- classの先頭に「w-full」を追加しました -->
+<button type="button" class="w-full text-white bg-blue-700 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-lg text-sm px-4 py-2.5 focus:outline-none" onclick="location.href='https://slack.com/intl/ja-jp/terms-of-service/user'">
+    公式規約
+</button>
+
+</section>
+
+            <!-- グランドルール -->
+            <section id="ground-rules" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900">📌 グランドルール</h1>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li class="p-2 border-b"><strong>自分を含めたメンバーや他人をけなしたり軽んじたりしない</strong></li>
+                    <li class="p-2 border-b"><strong>お互いの「心の安全」「身体の安全」を守る</strong> </li>
+                    <li class="p-2 border-b"><strong>自分に正直である</strong> </li>
+                    <li class="p-2"><strong>ネガティブなことにこだわらない</strong> </li>
+                </ol>
+            </section>
+
+            <!-- 開発者について -->
+            <section id="developer" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900">👩‍💻 開発者について</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-xl">
+                        Dev
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">slack名：y822</h3>
+                        <p class="text-sm text-gray-500"></p>
+                        <p class="text-xs text-gray-400 mt-1"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- フォーム提出について -->
+            <section id="forms" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900">📝 フォーム提出について</h1>
+                <p class="text-gray-600 mb-4">フォーム提出時期についてです。</p>
+                <div class="space-y-3">
+                    <p class="block p-3 border rounded hover:bg-gray-50 text-black-600 font-medium">科目学習フォームと外出申請はリンク集に掲載してあります。</p>
+                    <p class="block p-3 border rounded hover:bg-gray-50 text-black-600 font-medium">授業選択フォーム：決まった月に提出</p>
+                    <p  class="block p-3 border rounded hover:bg-gray-50 text-black-600 font-medium">CLIP STUDIO PAINT アクティベーションコード発行フォーム：1年ごとに再提出が必要です。<br>発行から1年経過するまで、新しいアクティベーションコードは発行できません。</p>
+                </div>
+            </section>
+
+            <!-- イベントカレンダー -->
+            <section id="calendar" class="content-section bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h1 class="text-2xl font-bold mb-4 text-gray-900">📅 イベントカレンダー</h1>
+                <p class="text-gray-600 mb-4">今後の社内イベント・全体会議・研修等のスケジュールです。</p>
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <ul class="divide-y divide-gray-200 text-sm">
+                        <li class="py-2 flex justify-between">
+                            <span class="font-bold text-gray-700">全体月次ミーティング</span>
+                            <span class="text-gray-500">毎月第1月曜日 10:00 - 11:00</span>
+                        </li>
+                        <li class="py-2 flex justify-between">
+                            <span class="font-bold text-gray-700">社内勉強会 (Tech Talk)</span>
+                            <span class="text-gray-500">隔週水曜日 17:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- タブ切替JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.content-section');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const targetId = item.getAttribute('data-target');
+
+                    // 全てのナビゲーションの active クラスを削除
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // クリックされたメニューを active に
+                    item.classList.add('active');
+
+                    // 全てのコンテンツエリアを非表示
+                    sections.forEach(sec => sec.classList.remove('active'));
+                    // 該当するコンテンツエリアを表示
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+
+                    // モバイル画面の場合、メニュー選択時にサイドバーを自動で閉じる
+                    const sidebar = document.getElementById('default-sidebar');
+                    if (window.innerWidth < 640 && sidebar.classList.contains('translate-x-0')) {
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
